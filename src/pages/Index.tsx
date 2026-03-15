@@ -4,6 +4,8 @@ import StickerCards from "@/components/StickerCards";
 import RouteSection from "@/components/RouteSection";
 import ContactSection from "@/components/ContactSection";
 import ApplySection from "@/components/ApplySection";
+import ScheduleSection from "@/components/ScheduleSection";
+import FaqSection from "@/components/FaqSection";
 import nightSkyBg from "@/assets/night-sky-bg.jpg";
 
 const Index = () => {
@@ -17,29 +19,30 @@ const Index = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Dark overlay for readability */}
-      <div className="fixed inset-0 bg-background/70 z-0" />
+      <div className="fixed inset-0 sky-overlay z-0" />
+      <div className="fixed inset-0 hero-focus z-0" />
 
       <FloatingStickers />
 
-      <div className="relative z-10">
+      <main className="relative z-10">
         <HeroSection />
         <RouteSection />
         <StickerCards />
+        <ScheduleSection />
         <ApplySection />
+        <FaqSection />
         <ContactSection />
 
-        {/* Footer */}
         <footer className="relative z-10 py-12 text-center font-body text-sm text-muted-foreground">
           <p>
-            made with ✨ by{" "}
+            made by{" "}
             <a href="https://zuup.dev" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4">
               zuup.dev
             </a>
           </p>
-          <p className="mt-2 text-xs">see you in the stars 🌙</p>
+          <p className="mt-2 text-xs">stargazing hackathon</p>
         </footer>
-      </div>
+      </main>
     </div>
   );
 };
