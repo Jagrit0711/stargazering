@@ -7,15 +7,18 @@ const ApplySection = () => {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    const existingScript = document.querySelector('script[data-fillout-embed="true"]');
-    if (existingScript) return;
+    if (!showForm) return;
 
     const script = document.createElement("script");
     script.src = "https://server.fillout.com/embed/v1/";
     script.async = true;
-    script.setAttribute("data-fillout-embed", "true");
+    script.setAttribute("data-fillout-embed", "runtime");
     document.body.appendChild(script);
-  }, []);
+
+    return () => {
+      script.remove();
+    };
+  }, [showForm]);
 
   return (
     <>
