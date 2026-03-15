@@ -2,28 +2,19 @@ import { motion } from "framer-motion";
 import telescopeImg from "@/assets/telescope-sticker.png";
 import starImg from "@/assets/star-sticker.png";
 
-const pop = {
-  hidden: { scale: 0, opacity: 0 },
-  visible: (i: number) => ({
-    scale: 1,
-    opacity: 1,
-    transition: { type: "spring" as const, bounce: 0.5, delay: i * 0.15 },
-  }),
-};
-
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-[15vh] text-center overflow-hidden">
       <motion.img
         src={starImg}
-        alt=""
+        alt="floating star sticker"
         className="sticker-img w-16 md:w-24 absolute top-[10%] left-[10%]"
         animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
         transition={{ duration: 3, repeat: Infinity }}
       />
       <motion.img
         src={starImg}
-        alt=""
+        alt="floating star sticker"
         className="sticker-img w-10 md:w-14 absolute top-[20%] right-[15%]"
         animate={{ y: [0, -12, 0] }}
         transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
@@ -31,61 +22,39 @@ const HeroSection = () => {
 
       <motion.img
         src={telescopeImg}
-        alt="telescope"
+        alt="telescope sticker"
         className="sticker-img w-28 md:w-40 mb-6"
-        variants={pop}
-        initial="hidden"
-        animate="visible"
-        custom={0}
+        initial={{ scale: 0.2, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ type: "spring", bounce: 0.45, duration: 0.8 }}
       />
 
-      <motion.h1
-        className="font-display text-5xl md:text-8xl lg:text-[9rem] font-bold tracking-tighter leading-[0.9] glow-text text-primary"
-        variants={pop}
-        initial="hidden"
-        animate="visible"
-        custom={1}
+      <motion.div
+        className="hero-text-panel max-w-3xl"
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", bounce: 0.35, delay: 0.15 }}
       >
-        stargazing ✦
-      </motion.h1>
+        <h1 className="font-display text-5xl md:text-8xl lg:text-[9rem] font-bold tracking-tighter leading-[0.9] glow-text text-primary">
+          stargazing
+        </h1>
 
-      <motion.p
-        className="font-body text-lg md:text-2xl text-foreground/80 mt-6 max-w-xl font-medium"
-        variants={pop}
-        initial="hidden"
-        animate="visible"
-        custom={2}
-        style={{ textWrap: "pretty" } as React.CSSProperties}
-      >
-        hack the night away. delhi to mussoorie. april 10th. ₹10k. pure magic. ✨
-      </motion.p>
+        <p className="font-body text-lg md:text-2xl text-foreground mt-6 max-w-xl mx-auto font-semibold">
+          hack the night away. delhi to mussoorie. april 10th. ₹10k. pure magic.
+        </p>
 
-      <motion.p
-        className="font-body text-sm md:text-base text-muted-foreground mt-3"
-        variants={pop}
-        initial="hidden"
-        animate="visible"
-        custom={3}
-      >
-        a hackathon by{" "}
-        <a href="https://zuup.dev" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-accent-pink transition-colors">
-          zuup.dev
-        </a>{" "}
-        — for everyone 🌙
-      </motion.p>
+        <p className="font-body text-sm md:text-base text-foreground/80 mt-3">
+          a hackathon by{" "}
+          <a href="https://zuup.dev" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-accent-pink transition-colors">
+            zuup.dev
+          </a>{" "}
+          — for everyone
+        </p>
 
-      <motion.a
-        href="#apply"
-        className="mt-10 inline-block bg-secondary text-secondary-foreground px-10 md:px-14 py-4 md:py-6 rounded-full font-display text-2xl md:text-3xl font-bold border-b-[6px] border-secondary/50 cursor-pointer"
-        whileHover={{ scale: 1.1, rotate: -2 }}
-        whileTap={{ scale: 0.9 }}
-        variants={pop}
-        initial="hidden"
-        animate="visible"
-        custom={4}
-      >
-        claim your star ✦
-      </motion.a>
+        <a href="#apply" className="inline-block mt-8 text-primary underline underline-offset-8 text-xl md:text-2xl font-display hover:text-accent-pink transition-colors">
+          open application section
+        </a>
+      </motion.div>
     </section>
   );
 };

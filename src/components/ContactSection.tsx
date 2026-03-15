@@ -15,7 +15,7 @@ const ContactSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        got questions? 💌
+        contact
       </motion.h2>
 
       <div className="flex flex-col md:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
@@ -31,10 +31,10 @@ const ContactSection = () => {
             transition={{ type: "spring", bounce: 0.4, delay: i * 0.1 }}
           >
             <h3 className="font-display text-2xl text-primary font-bold">{c.name}</h3>
-            <a href={`mailto:${c.email}`} className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors font-body text-sm">
+            <a href={`mailto:${c.email}`} className="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-body text-sm">
               <Mail size={16} /> {c.email}
             </a>
-            <a href={`tel:${c.phone}`} className="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors font-body text-sm">
+            <a href={`tel:${c.phone}`} className="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-body text-sm">
               <Phone size={16} /> {c.phone}
             </a>
           </motion.div>
