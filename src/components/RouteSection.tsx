@@ -8,7 +8,7 @@ const RouteSection = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"],
+    offset: ["start end", "end start"]
   });
 
   const busLeft = useTransform(scrollYProgress, [0.15, 0.85], ["10%", "90%"]);
@@ -19,8 +19,8 @@ const RouteSection = () => {
         className="font-display text-4xl md:text-6xl text-center text-primary glow-text mb-16"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-      >
+        viewport={{ once: true }}>
+        
         the journey
       </motion.h2>
 
@@ -33,16 +33,16 @@ const RouteSection = () => {
           className="sticker-img w-20 md:w-28 absolute top-[45%] -translate-y-1/2 -translate-x-1/2"
           style={{ left: busLeft }}
           animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 1.2, repeat: Infinity }}
-        />
+          transition={{ duration: 1.2, repeat: Infinity }} />
+        
 
         <motion.div
           className="absolute left-[6%] top-[26%] flex flex-col items-center"
           initial={{ x: -40, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ type: "spring", bounce: 0.45 }}
-        >
+          transition={{ type: "spring", bounce: 0.45 }}>
+          
           <img src={delhiImg} alt="Delhi landmark sticker" className="sticker-img w-24 md:w-36" />
           <span className="font-display text-2xl md:text-3xl text-primary mt-2">delhi</span>
         </motion.div>
@@ -52,14 +52,14 @@ const RouteSection = () => {
           initial={{ x: 40, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ type: "spring", bounce: 0.45, delay: 0.15 }}
-        >
-          <img src={mountainImg} alt="Mussoorie mountain sticker" className="sticker-img w-28 md:w-40" />
+          transition={{ type: "spring", bounce: 0.45, delay: 0.15 }}>
+          
+          <img alt="Mussoorie mountain sticker" className="sticker-img w-28 md:w-40" src="/lovable-uploads/b1f58bf7-317b-4ea7-876e-0daf3b6e0e71.png" />
           <span className="font-display text-2xl md:text-3xl text-primary mt-2">mussoorie</span>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default RouteSection;
