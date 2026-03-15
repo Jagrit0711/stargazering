@@ -43,7 +43,7 @@ const RouteSection = () => {
           viewport={{ once: true }}
           transition={{ type: "spring", bounce: 0.45 }}
         >
-          <img src={delhiImg} alt="Delhi landmark sticker" className="sticker-img w-24 md:w-34" />
+          <img src={delhiImg} alt="Delhi landmark sticker" className="sticker-img w-24 md:w-36" />
           <span className="font-display text-2xl md:text-3xl text-primary mt-2">delhi</span>
         </motion.div>
 
