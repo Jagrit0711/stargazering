@@ -7,7 +7,7 @@ const pop = {
   visible: (i: number) => ({
     scale: 1,
     opacity: 1,
-    transition: { type: "spring", bounce: 0.5, delay: i * 0.15 },
+    transition: { type: "spring" as const, bounce: 0.5, delay: i * 0.15 },
   }),
 };
 

@@ -8,7 +8,7 @@ import starImg from "@/assets/star-sticker.png";
 
 const cardPop = {
   hidden: { scale: 0.8, opacity: 0, y: 40 },
-  visible: { scale: 1, opacity: 1, y: 0, transition: { type: "spring", bounce: 0.4, duration: 0.8 } },
+  visible: { scale: 1, opacity: 1, y: 0, transition: { type: "spring" as const, bounce: 0.4, duration: 0.8 } },
 };
 
 const cards = [
