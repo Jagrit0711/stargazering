@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import campfireImg from "@/assets/campfire-sticker.png";
 import starSticker from "@/assets/star-sticker.png";
+import scheduleImg from "@/assets/schedule-sticker.png";
 
 const schedule = [
   {
@@ -44,7 +45,7 @@ const ScheduleSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <img src={campfireImg} alt="Campfire sticker" className="sticker-img w-24 md:w-32 mb-4" />
+        <img src={scheduleImg} alt="Schedule sticker" className="sticker-img w-24 md:w-32 mb-4" />
         <h2 className="font-display text-4xl md:text-6xl text-primary glow-text">3 day schedule</h2>
         <p className="font-body text-foreground mt-4 max-w-2xl font-semibold">
           theme: <span className="text-primary">signal in the sky</span> — build something that helps people notice hidden patterns.
@@ -62,7 +63,7 @@ const ScheduleSection = () => {
             viewport={{ once: true }}
             transition={{ type: "spring", bounce: 0.35, delay: index * 0.08 }}
           >
-            <img src={starSticker} alt="Star sticker" className="sticker-img w-10 mb-3" />
+            <img src={starSticker} alt="" className="sticker-img w-10 mb-3" />
             <p className="font-display text-3xl text-primary">{entry.day}</p>
             <h3 className="font-display text-2xl text-foreground mt-1 mb-4">{entry.title}</h3>
             <ul className="space-y-2 font-body text-foreground text-sm md:text-base font-semibold">

@@ -28,21 +28,44 @@ const FloatingStickers = () => {
           alt=""
         />
       ))}
-      {/* Tiny star particles */}
-      {Array.from({ length: 30 }).map((_, i) => (
+
+      {/* Twinkling star particles */}
+      {Array.from({ length: 50 }).map((_, i) => (
         <motion.div
           key={`particle-${i}`}
           className="star-particle"
           style={{
-            width: Math.random() * 3 + 1,
-            height: Math.random() * 3 + 1,
+            width: Math.random() * 4 + 1,
+            height: Math.random() * 4 + 1,
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
           }}
-          animate={{ opacity: [0.3, 1, 0.3] }}
-          transition={{ duration: 1.5 + Math.random() * 2, repeat: Infinity, delay: Math.random() * 3 }}
+          animate={{ opacity: [0, 1, 0], scale: [0.5, 1.5, 0.5] }}
+          transition={{ duration: 1.5 + Math.random() * 3, repeat: Infinity, delay: Math.random() * 5 }}
         />
       ))}
+
+      {/* Shooting star animation */}
+      <motion.div
+        className="absolute w-1 h-1 rounded-full"
+        style={{ background: "hsl(var(--star-glow))", boxShadow: "0 0 8px 4px hsl(var(--star-glow) / 0.6), -20px 0 30px 2px hsl(var(--star-glow) / 0.3)" }}
+        animate={{
+          top: ["10%", "40%"],
+          left: ["-5%", "105%"],
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 8, ease: "easeIn" }}
+      />
+      <motion.div
+        className="absolute w-1 h-1 rounded-full"
+        style={{ background: "hsl(var(--accent-pink))", boxShadow: "0 0 8px 4px hsl(var(--accent-pink) / 0.6), -20px 0 30px 2px hsl(var(--accent-pink) / 0.3)" }}
+        animate={{
+          top: ["5%", "30%"],
+          left: ["20%", "120%"],
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{ duration: 1.2, repeat: Infinity, repeatDelay: 12, ease: "easeIn", delay: 5 }}
+      />
     </div>
   );
 };

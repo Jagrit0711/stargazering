@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import rocketImg from "@/assets/rocket-sticker.png";
+import applyImg from "@/assets/apply-sticker.png";
 import starImg from "@/assets/star-sticker.png";
+import applyBadgeImg from "@/assets/apply-badge-sticker.png";
 
 const ApplySection = () => {
   const [showForm, setShowForm] = useState(false);
@@ -23,14 +24,15 @@ const ApplySection = () => {
   return (
     <>
       <section id="apply" className="relative z-10 py-[15vh] px-6 text-center">
-        <motion.h2
-          className="font-display text-4xl md:text-6xl text-primary glow-text mb-8"
+        <motion.div
+          className="flex flex-col items-center mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          application
-        </motion.h2>
+          <img src={applyBadgeImg} alt="Application sticker" className="sticker-img w-20 md:w-28 mb-4" />
+          <h2 className="font-display text-4xl md:text-6xl text-primary glow-text">application</h2>
+        </motion.div>
 
         <motion.p
           className="font-body text-foreground max-w-md mx-auto mb-10 text-base md:text-lg font-semibold"
@@ -48,7 +50,7 @@ const ApplySection = () => {
           whileHover={{ scale: 1.08, rotate: -2 }}
           whileTap={{ scale: 0.92 }}
         >
-          <img src={rocketImg} alt="Launch application" className="sticker-img w-36 md:w-48" />
+          <img src={applyImg} alt="Launch application" className="sticker-img w-36 md:w-48" />
           <span className="font-display text-2xl md:text-3xl text-primary glow-text mt-4 group-hover:text-accent-pink transition-colors">
             blast off
           </span>

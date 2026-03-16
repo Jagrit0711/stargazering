@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import delhiImg from "@/assets/delhi-sticker.png";
 import busImg from "@/assets/bus-sticker.png";
 import mussoorieImg from "@/assets/mussoorie-sticker.png";
+import journeyImg from "@/assets/journey-sticker.png";
 
 const RouteSection = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -15,13 +16,15 @@ const RouteSection = () => {
 
   return (
     <section ref={sectionRef} className="relative z-10 py-[15vh] px-6">
-      <motion.h2
-        className="font-display text-4xl md:text-6xl text-center text-primary glow-text mb-16"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}>
-        the journey
-      </motion.h2>
+      <motion.div
+        className="flex flex-col items-center mb-16"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <img src={journeyImg} alt="Journey compass sticker" className="sticker-img w-20 md:w-28 mb-4" />
+        <h2 className="font-display text-4xl md:text-6xl text-center text-primary glow-text">the journey</h2>
+      </motion.div>
 
       <div className="relative max-w-5xl mx-auto min-h-[260px] md:min-h-[300px]">
         <div className="absolute left-[12%] right-[12%] top-[45%] border-t-[3px] border-dashed border-primary/55" />
