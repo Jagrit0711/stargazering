@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone } from "lucide-react";
-import waveImg from "@/assets/wave-sticker.png";
+import astronautImg from "@/assets/astronaut-sticker.png";
 
 const contacts = [
   { name: "jagrit", email: "jagrit@zuup.dev", phone: "8851844602" },
@@ -16,7 +15,7 @@ const ContactSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <img src={waveImg} alt="Wave sticker" className="sticker-img w-20 md:w-28 mb-4" />
+        <img src={astronautImg} alt="Astronaut sticker" className="sticker-img w-24 md:w-32 mb-4" />
         <h2 className="font-display text-4xl md:text-6xl text-center text-primary glow-text">contact</h2>
       </motion.div>
 
@@ -33,11 +32,11 @@ const ContactSection = () => {
             transition={{ type: "spring", bounce: 0.4, delay: i * 0.1 }}
           >
             <h3 className="font-display text-2xl text-primary font-bold">{c.name}</h3>
-            <a href={`mailto:${c.email}`} className="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-body text-sm">
-              <Mail size={16} /> {c.email}
+            <a href={`mailto:${c.email}`} className="text-foreground hover:text-primary transition-colors font-body text-sm">
+              {c.email}
             </a>
-            <a href={`tel:${c.phone}`} className="flex items-center gap-2 text-foreground hover:text-primary transition-colors font-body text-sm">
-              <Phone size={16} /> {c.phone}
+            <a href={`tel:${c.phone}`} className="text-foreground hover:text-primary transition-colors font-body text-sm">
+              {c.phone}
             </a>
           </motion.div>
         ))}

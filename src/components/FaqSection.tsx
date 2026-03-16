@@ -12,7 +12,7 @@ const faqItems = [
     answer: "No. Stargazing by Zuup is independently organized and not affiliated with any school.",
   },
   {
-    question: "What does the ₹10,000 fee include?",
+    question: "What does the ₹8,500 fee include?",
     answer: "The fee covers travel from Delhi, accommodation, meals, and full event access.",
   },
   {
@@ -22,6 +22,22 @@ const faqItems = [
   {
     question: "What should I bring?",
     answer: "Bring your laptop, charger, personal essentials, and one project idea you want to explore.",
+  },
+  {
+    question: "Who is legally responsible if something goes wrong?",
+    answer: "All participants must sign a declaration waiver form before attending. While organizers take safety seriously and provide mentor supervision, participants acknowledge personal responsibility through the signed waiver.",
+  },
+  {
+    question: "What is the policy on alcohol and misconduct?",
+    answer: "We have a strict zero-tolerance policy. Alcohol, substance use, harassment, and any form of malpractice are absolutely not allowed. Anyone found violating this policy will be asked to leave immediately at their own expense.",
+  },
+  {
+    question: "How are students supervised during the trip?",
+    answer: "Every group of 3-5 participants is assigned a dedicated mentor who is responsible for their safety and well-being throughout the event. Mentors travel with the group and are available around the clock.",
+  },
+  {
+    question: "Do I need to sign any documents?",
+    answer: "Yes, every participant must sign a declaration waiver form before boarding the bus. This is mandatory and covers liability, code of conduct acknowledgement, and emergency contact details.",
   },
 ];
 

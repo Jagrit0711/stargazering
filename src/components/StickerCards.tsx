@@ -5,6 +5,7 @@ import campfireImg from "@/assets/campfire-sticker.png";
 import delhiImg from "@/assets/delhi-sticker.png";
 import laptopImg from "@/assets/laptop-sticker.png";
 import starImg from "@/assets/star-sticker.png";
+import stickerSheetImg from "@/assets/sticker-sheet-sticker.png";
 
 const cards = [
   {
@@ -26,7 +27,7 @@ const cards = [
     imgAlt: "Star",
     rotate: "-1deg",
     title: "how much?",
-    body: "₹10,000 covers the ride, stay, food, and hackathon experience.",
+    body: "₹8,500 covers the ride, stay, food, and hackathon experience.",
   },
   {
     img: campfireImg,
@@ -54,15 +55,16 @@ const cards = [
 const StickerCards = () => {
   return (
     <section className="relative z-10 px-6 py-[15vh] max-w-6xl mx-auto">
-      <motion.h2
-        className="font-display text-4xl md:text-6xl text-center text-primary glow-text mb-16 md:mb-24"
+      <motion.div
+        className="flex flex-col items-center text-center mb-16 md:mb-24"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ type: "spring", bounce: 0.4 }}
       >
-        the sticker sheet
-      </motion.h2>
+        <img src={stickerSheetImg} alt="Sticker sheet" className="sticker-img w-24 md:w-32 mb-4" />
+        <h2 className="font-display text-4xl md:text-6xl text-primary glow-text">the sticker sheet</h2>
+      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
         {cards.map((card, i) => (
