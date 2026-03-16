@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import telescopeImg from "@/assets/telescope-sticker.png";
-import applyBadgeImg from "@/assets/apply-badge-sticker.png";
+import rocketImg from "@/assets/rocket-sticker.png";
+import starImg from "@/assets/star-sticker.png";
 
 const ApplySection = () => {
   const [showForm, setShowForm] = useState(false);
@@ -38,28 +38,34 @@ const ApplySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          click the telescope to open the full application form.
+          ready to launch? smash the rocket to apply.
         </motion.p>
 
         <motion.button
           type="button"
-          className="relative inline-flex flex-col items-center cursor-pointer"
+          className="relative inline-flex flex-col items-center cursor-pointer group"
           onClick={() => setShowForm(true)}
-          whileHover={{ scale: 1.08, rotate: -1 }}
+          whileHover={{ scale: 1.08, rotate: -2 }}
           whileTap={{ scale: 0.92 }}
         >
-          <img src={telescopeImg} alt="Open application form" className="sticker-img w-44 md:w-60" />
-          <img src={applyBadgeImg} alt="Apply badge" className="sticker-img w-40 md:w-52 -mt-6" />
+          <img src={rocketImg} alt="Launch application" className="sticker-img w-36 md:w-48" />
+          <span className="font-display text-2xl md:text-3xl text-primary glow-text mt-4 group-hover:text-accent-pink transition-colors">
+            blast off
+          </span>
         </motion.button>
 
-        <a
-          href="https://form.fillout.com/t/u6SC6x2YTAus"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block mt-6 text-primary underline underline-offset-4 font-body"
-        >
-          open direct form link
-        </a>
+        <div className="flex justify-center gap-4 mt-6">
+          <motion.img src={starImg} alt="" className="sticker-img w-6" animate={{ rotate: [0, 360] }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }} />
+          <a
+            href="https://form.fillout.com/t/u6SC6x2YTAus"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline underline-offset-4 font-body hover:text-accent-pink transition-colors"
+          >
+            open direct form link
+          </a>
+          <motion.img src={starImg} alt="" className="sticker-img w-6" animate={{ rotate: [0, -360] }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }} />
+        </div>
       </section>
 
       <div className={`${showForm ? "block" : "hidden"} fixed inset-0 z-[9999]`}>

@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import delhiImg from "@/assets/delhi-sticker.png";
-import mountainImg from "@/assets/mountain-sticker.png";
 import busImg from "@/assets/bus-sticker.png";
+import mussoorieImg from "@/assets/mussoorie-sticker.png";
 
 const RouteSection = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -20,7 +20,6 @@ const RouteSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}>
-        
         the journey
       </motion.h2>
 
@@ -34,7 +33,6 @@ const RouteSection = () => {
           style={{ left: busLeft }}
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 1.2, repeat: Infinity }} />
-        
 
         <motion.div
           className="absolute left-[6%] top-[26%] flex flex-col items-center"
@@ -42,7 +40,6 @@ const RouteSection = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ type: "spring", bounce: 0.45 }}>
-          
           <img src={delhiImg} alt="Delhi landmark sticker" className="sticker-img w-24 md:w-36" />
           <span className="font-display text-2xl md:text-3xl text-primary mt-2">delhi</span>
         </motion.div>
@@ -53,13 +50,12 @@ const RouteSection = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ type: "spring", bounce: 0.45, delay: 0.15 }}>
-          
-          <img alt="Mussoorie mountain sticker" className="sticker-img w-28 md:w-40" src="/lovable-uploads/b1f58bf7-317b-4ea7-876e-0daf3b6e0e71.png" />
+          <img src={mussoorieImg} alt="Mussoorie mountain sticker" className="sticker-img w-28 md:w-40" />
           <span className="font-display text-2xl md:text-3xl text-primary mt-2">mussoorie</span>
         </motion.div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default RouteSection;

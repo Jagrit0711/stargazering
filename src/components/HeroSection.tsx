@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import telescopeImg from "@/assets/telescope-sticker.png";
 import starImg from "@/assets/star-sticker.png";
 
 const HeroSection = () => {
@@ -20,15 +19,6 @@ const HeroSection = () => {
         transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
       />
 
-      <motion.img
-        src={telescopeImg}
-        alt="telescope sticker"
-        className="sticker-img w-28 md:w-40 mb-6"
-        initial={{ scale: 0.2, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: "spring", bounce: 0.45, duration: 0.8 }}
-      />
-
       <motion.div
         className="hero-text-panel max-w-3xl"
         initial={{ opacity: 0, y: 24 }}
@@ -40,7 +30,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="font-body text-lg md:text-2xl text-foreground mt-6 max-w-xl mx-auto font-semibold">
-          hack the night away. delhi to mussoorie. april 10th. ₹10k. pure magic.
+          hack the night away. delhi to mussoorie. april 10th. pure magic.
         </p>
 
         <p className="font-body text-sm md:text-base text-foreground/80 mt-3">
@@ -52,7 +42,7 @@ const HeroSection = () => {
         </p>
 
         <a href="#apply" className="inline-block mt-8 text-primary underline underline-offset-8 text-xl md:text-2xl font-display hover:text-accent-pink transition-colors">
-          open application section
+          claim your spot
         </a>
       </motion.div>
     </section>
