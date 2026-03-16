@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
+import waveImg from "@/assets/wave-sticker.png";
 
 const contacts = [
   { name: "jagrit", email: "jagrit@zuup.dev", phone: "8851844602" },
@@ -9,14 +10,15 @@ const contacts = [
 const ContactSection = () => {
   return (
     <section className="relative z-10 py-[15vh] px-6">
-      <motion.h2
-        className="font-display text-4xl md:text-6xl text-center text-primary glow-text mb-12"
+      <motion.div
+        className="flex flex-col items-center mb-12"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        contact
-      </motion.h2>
+        <img src={waveImg} alt="Wave sticker" className="sticker-img w-20 md:w-28 mb-4" />
+        <h2 className="font-display text-4xl md:text-6xl text-center text-primary glow-text">contact</h2>
+      </motion.div>
 
       <div className="flex flex-col md:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
         {contacts.map((c, i) => (
