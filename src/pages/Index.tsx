@@ -1,7 +1,10 @@
 import FloatingStickers from "@/components/FloatingStickers";
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import StickerCards from "@/components/StickerCards";
 import RouteSection from "@/components/RouteSection";
+import ExploreSection from "@/components/ExploreSection";
+import SafetySection from "@/components/SafetySection";
 import ContactSection from "@/components/ContactSection";
 import ApplySection from "@/components/ApplySection";
 import ScheduleSection from "@/components/ScheduleSection";
@@ -23,11 +26,14 @@ const Index = () => {
       <div className="fixed inset-0 hero-focus z-0" />
 
       <FloatingStickers />
+      <Navbar />
 
       <main className="relative z-10">
         <HeroSection />
         <RouteSection />
         <StickerCards />
+        <ExploreSection />
+        <SafetySection />
         <ScheduleSection />
         <ApplySection />
         <FaqSection />

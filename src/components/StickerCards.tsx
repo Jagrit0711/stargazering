@@ -27,7 +27,7 @@ const cards = [
     imgAlt: "Star",
     rotate: "-1deg",
     title: "how much?",
-    body: "₹8,500 covers the ride, stay, food, and hackathon experience.",
+    body: "8.5k INR covers the ride, stay, food, and hackathon experience. zero profit — every rupee goes to the event.",
   },
   {
     img: campfireImg,
@@ -47,14 +47,14 @@ const cards = [
     img: mountainImg,
     imgAlt: "Mountains",
     rotate: "1deg",
-    title: "fun. very fun.",
-    body: "no formal classroom setup. just telescopes, terminals, and mountain nights.",
+    title: "the goal?",
+    body: "build something that matters under the stars. ship a project, make friends, and create memories that last forever.",
   },
 ];
 
 const StickerCards = () => {
   return (
-    <section className="relative z-10 px-6 py-[15vh] max-w-6xl mx-auto">
+    <section id="info" className="relative z-10 px-6 py-[15vh] max-w-6xl mx-auto">
       <motion.div
         className="flex flex-col items-center text-center mb-16 md:mb-24"
         initial={{ opacity: 0, y: 30 }}
@@ -85,6 +85,27 @@ const StickerCards = () => {
           </motion.div>
         ))}
       </div>
+
+      {/* Travel partner */}
+      <motion.div
+        className="flex flex-col items-center mt-16 gap-3"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <p className="font-body text-foreground/70 text-sm">travel partner</p>
+        <a
+          href="https://www.theshivayas.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-display text-2xl md:text-3xl text-primary glow-text hover:text-secondary transition-colors"
+        >
+          the shivayas
+        </a>
+        <p className="font-body text-foreground/60 text-xs max-w-md text-center">
+          we take zero profit from this event. every single rupee of the 8.5k fee goes directly into travel, stay, food, and the hackathon experience.
+        </p>
+      </motion.div>
     </section>
   );
 };

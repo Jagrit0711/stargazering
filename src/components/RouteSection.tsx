@@ -15,7 +15,7 @@ const RouteSection = () => {
   const busLeft = useTransform(scrollYProgress, [0.15, 0.85], ["10%", "90%"]);
 
   return (
-    <section ref={sectionRef} className="relative z-10 py-[15vh] px-6">
+    <section id="journey" ref={sectionRef} className="relative z-10 py-[15vh] px-6">
       <motion.div
         className="flex flex-col items-center mb-16"
         initial={{ opacity: 0, y: 20 }}

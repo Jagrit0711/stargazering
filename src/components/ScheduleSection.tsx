@@ -8,9 +8,9 @@ const schedule = [
     day: "day 1",
     title: "departure + setup",
     items: [
-      "Morning: depart from Delhi",
-      "Afternoon: check-in at Mussoorie stay",
-      "Evening: opening circle + team formation",
+      "morning: depart from Delhi in luxury AC tempo traveller",
+      "afternoon: check-in at Mussoorie stay",
+      "evening: opening circle + team formation",
     ],
     rotate: "-2deg",
   },
@@ -18,9 +18,9 @@ const schedule = [
     day: "day 2",
     title: "build sprint",
     items: [
-      "Morning: mentor rounds and workshop",
-      "Afternoon: focused build sessions",
-      "Night: stargazing coding block",
+      "morning: mentor rounds and workshop",
+      "afternoon: focused build sessions",
+      "night: stargazing coding block under the open sky",
     ],
     rotate: "2deg",
   },
@@ -28,9 +28,9 @@ const schedule = [
     day: "day 3",
     title: "finale",
     items: [
-      "Morning: final polish and submissions",
-      "Afternoon: demos + showcase",
-      "Evening: winners, closing, return",
+      "morning: final polish and submissions",
+      "afternoon: demos + showcase + winners",
+      "evening: closing circle, pack up, return to Delhi",
     ],
     rotate: "-1deg",
   },
@@ -38,7 +38,7 @@ const schedule = [
 
 const ScheduleSection = () => {
   return (
-    <section className="relative z-10 px-6 py-[15vh] max-w-6xl mx-auto">
+    <section id="schedule" className="relative z-10 px-6 py-[15vh] max-w-6xl mx-auto">
       <motion.div
         className="flex flex-col items-center text-center mb-14"
         initial={{ opacity: 0, y: 20 }}
@@ -61,9 +61,10 @@ const ScheduleSection = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            whileHover={{ scale: 1.03, rotate: "0deg" }}
             transition={{ type: "spring", bounce: 0.35, delay: index * 0.08 }}
           >
-            <img src={starSticker} alt="" className="sticker-img w-10 mb-3" />
+            <img src={index === 2 ? campfireImg : starSticker} alt="" className="sticker-img w-10 mb-3" />
             <p className="font-display text-3xl text-primary">{entry.day}</p>
             <h3 className="font-display text-2xl text-foreground mt-1 mb-4">{entry.title}</h3>
             <ul className="space-y-2 font-body text-foreground text-sm md:text-base font-semibold">
