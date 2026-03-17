@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import astronautImg from "@/assets/astronaut-sticker.png";
+import starImg from "@/assets/star-sticker.png";
 
 const contacts = [
   { name: "jagrit", email: "jagrit@zuup.dev", phone: "8851844602" },
@@ -8,7 +9,7 @@ const contacts = [
 
 const ContactSection = () => {
   return (
-    <section className="relative z-10 py-[15vh] px-6">
+    <section id="contact" className="relative z-10 py-[15vh] px-6">
       <motion.div
         className="flex flex-col items-center mb-12"
         initial={{ opacity: 0, y: 20 }}
@@ -31,6 +32,7 @@ const ContactSection = () => {
             whileHover={{ scale: 1.05, rotate: "0deg" }}
             transition={{ type: "spring", bounce: 0.4, delay: i * 0.1 }}
           >
+            <img src={starImg} alt="" className="sticker-img w-8 -mt-8" />
             <h3 className="font-display text-2xl text-primary font-bold">{c.name}</h3>
             <a href={`mailto:${c.email}`} className="text-foreground hover:text-primary transition-colors font-body text-sm">
               {c.email}
