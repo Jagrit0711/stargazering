@@ -37,7 +37,7 @@ const faqItems = [
   },
   {
     question: "Do I need to sign any documents?",
-    answer: "Yes. Every participant must sign a declaration waiver form before boarding the bus. This is mandatory and covers liability, code of conduct acknowledgement, and emergency contact details. No signature = no boarding.",
+    answer: "Yes. Every participant must print, fill out, and sign the declaration waiver form and submit it while boarding the bus. No signed waiver = no boarding. No exceptions. You can download the waiver from the Safety section on this page.",
   },
   {
     question: "What about travel and accommodation?",
