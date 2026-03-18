@@ -45,7 +45,7 @@ const faqItems = [
   },
   {
     question: "What places will we visit besides the hackathon?",
-    answer: "We'll visit Kempty Falls, do the safe half of the George Everest trek (tiled path with barricades — it's more of a scenic hike), explore Mall Road market and local cafes. If road conditions allow, we'll also visit Surkanda Devi Temple in Dhanaulti.",
+    answer: "We'll visit Kempty Falls, and either do the safe half of the George Everest trek (tiled path with barricades — it's more of a scenic hike) OR visit Surkanda Devi Temple in Dhanaulti — it's one of the two depending on road and weather conditions. We'll also explore Mall Road market and local cafes.",
   },
   {
     question: "Who organized this?",
