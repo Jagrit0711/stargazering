@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import applyImg from "@/assets/apply-sticker.png";
+import rocketImg from "@/assets/rocket-sticker.png";
 import starImg from "@/assets/star-sticker.png";
 import applyBadgeImg from "@/assets/apply-badge-sticker.png";
+import waveImg from "@/assets/wave-sticker.png";
 
 const ApplySection = () => {
   const [showForm, setShowForm] = useState(false);
@@ -25,49 +26,50 @@ const ApplySection = () => {
     <>
       <section id="apply" className="relative z-10 py-[15vh] px-6 text-center">
         <motion.div
-          className="flex flex-col items-center mb-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <img src={applyBadgeImg} alt="Application sticker" className="sticker-img w-20 md:w-28 mb-4" />
-          <h2 className="font-display text-4xl md:text-6xl text-primary glow-text">application</h2>
-        </motion.div>
-
-        <motion.p
-          className="font-body text-foreground max-w-md mx-auto mb-10 text-base md:text-lg font-semibold"
+          className="flex flex-col items-center max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          ready to launch? smash the rocket to apply.
-        </motion.p>
+          <img src={applyBadgeImg} alt="Application sticker" className="sticker-img w-24 md:w-32 mb-4" />
+          <h2 className="font-display text-4xl md:text-6xl text-primary glow-text mb-6">ready to launch?</h2>
 
-        <motion.button
-          type="button"
-          className="relative inline-flex flex-col items-center cursor-pointer group"
-          onClick={() => setShowForm(true)}
-          whileHover={{ scale: 1.08, rotate: -2 }}
-          whileTap={{ scale: 0.92 }}
-        >
-          <img src={applyImg} alt="Launch application" className="sticker-img w-36 md:w-48" />
-          <span className="font-display text-2xl md:text-3xl text-primary glow-text mt-4 group-hover:text-accent-pink transition-colors">
-            blast off
-          </span>
-        </motion.button>
+          <div className="sticker-card w-full max-w-lg mx-auto flex flex-col items-center gap-6 py-10">
+            <img src={waveImg} alt="" className="sticker-img w-16 md:w-20" />
+            <p className="font-body text-foreground text-lg md:text-xl font-bold">
+              smash the rocket to apply
+            </p>
+            <p className="font-body text-foreground/60 text-sm">
+              takes less than 2 minutes. we'll get back to you fast.
+            </p>
 
-        <div className="flex justify-center gap-4 mt-6">
-          <motion.img src={starImg} alt="" className="sticker-img w-6" animate={{ rotate: [0, 360] }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }} />
-          <a
-            href="https://form.fillout.com/t/u6SC6x2YTAus"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline underline-offset-4 font-body hover:text-accent-pink transition-colors"
-          >
-            open direct form link
-          </a>
-          <motion.img src={starImg} alt="" className="sticker-img w-6" animate={{ rotate: [0, -360] }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }} />
-        </div>
+            <motion.button
+              type="button"
+              className="relative inline-flex flex-col items-center cursor-pointer group"
+              onClick={() => setShowForm(true)}
+              whileHover={{ scale: 1.12, rotate: -5 }}
+              whileTap={{ scale: 0.88 }}
+            >
+              <img src={rocketImg} alt="Launch application" className="sticker-img w-32 md:w-44" />
+              <span className="font-display text-3xl md:text-4xl text-primary glow-text mt-4 group-hover:text-secondary transition-colors">
+                blast off
+              </span>
+            </motion.button>
+          </div>
+
+          <div className="flex justify-center items-center gap-4 mt-8">
+            <motion.img src={starImg} alt="" className="sticker-img w-6" animate={{ rotate: [0, 360] }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }} />
+            <a
+              href="https://form.fillout.com/t/u6SC6x2YTAus"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-4 font-body hover:text-secondary transition-colors"
+            >
+              open direct form link
+            </a>
+            <motion.img src={starImg} alt="" className="sticker-img w-6" animate={{ rotate: [0, -360] }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }} />
+          </div>
+        </motion.div>
       </section>
 
       <div className={`${showForm ? "block" : "hidden"} fixed inset-0 z-[9999]`}>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import starImg from "@/assets/star-sticker.png";
-import applyNavImg from "@/assets/apply-nav-sticker.png";
+import rocketImg from "@/assets/rocket-sticker.png";
 
 const navLinks = [
   { label: "journey", href: "#journey" },
@@ -67,48 +67,37 @@ const Navbar = () => {
               {link.label}
             </motion.button>
           ))}
-          {/* Image-based apply button */}
           <motion.button
             onClick={() => handleClick("#apply")}
-            whileHover={{ scale: 1.12, rotate: -3 }}
+            whileHover={{ scale: 1.12, rotate: -5 }}
             whileTap={{ scale: 0.9 }}
             className="ml-2"
           >
-            <img src={applyNavImg} alt="Apply now" className="sticker-img w-14 h-14 object-contain" />
+            <img src={rocketImg} alt="Apply now" className="sticker-img w-12 h-12 object-contain" />
           </motion.button>
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Mobile */}
         <div className="md:hidden flex items-center gap-3">
           <motion.button
             onClick={() => handleClick("#apply")}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <img src={applyNavImg} alt="Apply now" className="sticker-img w-10 h-10 object-contain" />
+            <img src={rocketImg} alt="Apply now" className="sticker-img w-10 h-10 object-contain" />
           </motion.button>
           <motion.button
             className="flex flex-col gap-1.5 p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
             whileTap={{ scale: 0.9 }}
           >
-            <motion.span
-              className="block w-6 h-0.5 bg-primary rounded-full"
-              animate={mobileOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-            />
-            <motion.span
-              className="block w-6 h-0.5 bg-primary rounded-full"
-              animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
-            />
-            <motion.span
-              className="block w-6 h-0.5 bg-primary rounded-full"
-              animate={mobileOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-            />
+            <motion.span className="block w-6 h-0.5 bg-primary rounded-full" animate={mobileOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }} />
+            <motion.span className="block w-6 h-0.5 bg-primary rounded-full" animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }} />
+            <motion.span className="block w-6 h-0.5 bg-primary rounded-full" animate={mobileOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }} />
           </motion.button>
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
