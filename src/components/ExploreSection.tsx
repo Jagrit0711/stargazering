@@ -4,6 +4,7 @@ import waterfallImg from "@/assets/waterfall-sticker.png";
 import trekImg from "@/assets/trek-sticker.png";
 import campfireImg from "@/assets/campfire-sticker.png";
 import starImg from "@/assets/star-sticker.png";
+import mussoorie from "@/assets/mussoorie-sticker.png";
 
 const places = [
   {
@@ -35,11 +36,12 @@ const ExploreSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <img src={exploreImg} alt="Explore map sticker" className="sticker-img w-24 md:w-32 mb-4" />
+        <img src={exploreImg} alt="Explore compass sticker" className="sticker-img w-28 md:w-36 mb-4" />
         <h2 className="font-display text-4xl md:text-6xl text-primary glow-text">beyond the hackathon</h2>
         <p className="font-body text-foreground mt-4 max-w-2xl font-semibold">
           it's not just coding. we explore mussoorie's best spots together.
         </p>
+        <img src={mussoorie} alt="Mussoorie" className="sticker-img w-32 md:w-48 mt-6" />
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -27,7 +27,7 @@ const cards = [
     imgAlt: "Star",
     rotate: "-1deg",
     title: "how much?",
-    body: "8.5k INR covers the ride, stay, food, and hackathon experience. zero profit — every rupee goes to the event.",
+    body: "₹7,200 covers the ride, stay, food, and hackathon experience. zero profit — every rupee goes to the event.",
   },
   {
     img: campfireImg,
@@ -103,7 +103,7 @@ const StickerCards = () => {
           the shivayas
         </a>
         <p className="font-body text-foreground/60 text-xs max-w-md text-center">
-          we take zero profit from this event. every single rupee of the 8.5k fee goes directly into travel, stay, food, and the hackathon experience.
+          we take zero profit from this event. every single rupee of the ₹7,200 fee goes directly into travel, stay, food, and the hackathon experience.
         </p>
       </motion.div>
     </section>
