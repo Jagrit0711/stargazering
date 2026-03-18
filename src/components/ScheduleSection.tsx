@@ -21,8 +21,8 @@ const schedule = [
     title: "build sprint",
     icon: telescopeImg,
     items: [
-      "morning: mentor rounds and workshop",
-      "afternoon: focused build sessions",
+      "morning: visit to george everest / surkanda devi (1 of 2)",
+      "afternoon: focused build sprint",
       "night: stargazing coding block under the open sky",
     ],
     rotate: "2deg",

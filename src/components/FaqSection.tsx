@@ -25,7 +25,7 @@ const faqItems = [
   },
   {
     question: "Is it safe? Who is legally responsible?",
-    answer: "Safety is our top priority. Every 3-5 participants get a dedicated mentor who travels with them and supervises 24/7. All participants must sign a mandatory declaration waiver form. The participant is legally responsible for their own actions — any damage to property is their personal responsibility. We collect emergency contacts and medical info during registration.",
+    answer: "Safety is our top priority. Every 3-5 participants get a dedicated mentor who travels with them and supervises 24/7. All participants must print and sign a mandatory declaration waiver form and submit it while boarding. The participant is legally responsible for their own actions — any damage to property is their personal responsibility. We also take comprehensive travel insurance for every participant through Bajaj Allianz Insurance.",
   },
   {
     question: "What is the policy on alcohol and misconduct?",
@@ -37,7 +37,7 @@ const faqItems = [
   },
   {
     question: "Do I need to sign any documents?",
-    answer: "Yes. Every participant must sign a declaration waiver form before boarding the bus. This is mandatory and covers liability, code of conduct acknowledgement, and emergency contact details. No signature = no boarding.",
+    answer: "Yes. Every participant must print, fill out, and sign the declaration waiver form and submit it while boarding the bus. No signed waiver = no boarding. No exceptions. You can download the waiver from the Safety section on this page.",
   },
   {
     question: "What about travel and accommodation?",
@@ -45,7 +45,7 @@ const faqItems = [
   },
   {
     question: "What places will we visit besides the hackathon?",
-    answer: "We'll visit Kempty Falls, do the safe half of the George Everest trek (tiled path with barricades — it's more of a scenic hike), explore Mall Road market and local cafes. If road conditions allow, we'll also visit Surkanda Devi Temple in Dhanaulti.",
+    answer: "We'll visit Kempty Falls, and either do the safe half of the George Everest trek (tiled path with barricades — it's more of a scenic hike) OR visit Surkanda Devi Temple in Dhanaulti — it's one of the two depending on road and weather conditions. We'll also explore Mall Road market and local cafes.",
   },
   {
     question: "Who organized this?",

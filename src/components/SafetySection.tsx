@@ -33,12 +33,14 @@ const safetyPoints = [
 ];
 
 const legalPoints = [
-  "every participant must sign a mandatory declaration waiver form before boarding the bus.",
+  "every participant must sign a mandatory declaration waiver form before boarding the bus. no signed waiver = no boarding. no exceptions.",
+  "please print the waiver form, fill it out, and submit it while boarding the bus.",
   "participants are responsible for their own actions. any damage caused to property (hotel, bus, venues) is the individual's personal responsibility.",
   "we enforce a strict zero-tolerance policy on alcohol, substance use, harassment, and any form of malpractice. violators will be asked to leave immediately at their own expense.",
   "the child/participant is legally responsible for their own conduct throughout the event.",
   "mentors are assigned at a 1:3-5 ratio for continuous supervision but are not legal guardians.",
   "emergency contacts and medical information are collected during registration for immediate use if needed.",
+  "we are taking comprehensive travel insurance for every participant through bajaj allianz insurance for the entire duration of the trip.",
 ];
 
 const SafetySection = () => {
@@ -78,7 +80,7 @@ const SafetySection = () => {
 
       {/* Legal section */}
       <motion.div
-        className="sticker-card max-w-3xl mx-auto"
+        className="sticker-card max-w-3xl mx-auto mb-10"
         style={{ rotate: "0deg" }}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -104,6 +106,47 @@ const SafetySection = () => {
             </motion.li>
           ))}
         </ul>
+      </motion.div>
+
+      {/* Download section */}
+      <motion.div
+        className="sticker-card max-w-3xl mx-auto"
+        style={{ rotate: "1deg" }}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        whileHover={{ rotate: "0deg" }}
+      >
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <img src={starImg} alt="" className="sticker-img w-8" />
+          <h3 className="font-display text-3xl md:text-4xl text-primary text-center">downloads</h3>
+          <img src={starImg} alt="" className="sticker-img w-8" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a
+            href="/stargazing-brochure.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-3 p-6 rounded-2xl border-2 border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors group"
+          >
+            <span className="font-display text-5xl group-hover:scale-110 transition-transform">📄</span>
+            <span className="font-display text-2xl text-primary">event brochure</span>
+            <span className="font-body text-sm text-foreground/70 text-center">full details about the event, schedule, safety & more</span>
+          </a>
+          <a
+            href="/stargazing-waiver.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-3 p-6 rounded-2xl border-2 border-secondary/30 bg-secondary/5 hover:bg-secondary/10 transition-colors group"
+          >
+            <span className="font-display text-5xl group-hover:scale-110 transition-transform">📝</span>
+            <span className="font-display text-2xl text-secondary">waiver form</span>
+            <span className="font-body text-sm text-foreground/70 text-center">print this out, fill it, and submit while boarding the bus. mandatory!</span>
+          </a>
+        </div>
+        <p className="font-body text-xs text-foreground/50 text-center mt-4">
+          ⚠️ no one boards the bus without a signed waiver. please print and bring it with you.
+        </p>
       </motion.div>
     </section>
   );
