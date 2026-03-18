@@ -15,8 +15,8 @@ const places = [
   },
   {
     img: trekImg,
-    title: "george everest + surkanda devi",
-    desc: "a scenic hike up the tiled, barricaded trail to george everest viewpoint (the safe half). if roads allow, we visit surkanda devi temple in dhanaulti too.",
+    title: "george everest / surkanda devi",
+    desc: "one of two — either a scenic hike up the tiled, barricaded trail to george everest viewpoint (the safe half only), or a visit to surkanda devi temple in dhanaulti. depends on road & weather conditions.",
     rotate: "2deg",
   },
   {
