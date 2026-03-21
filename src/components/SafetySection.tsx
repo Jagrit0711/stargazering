@@ -21,7 +21,7 @@ const safetyPoints = [
   {
     img: hotelImg,
     title: "stay details",
-    desc: "hotel is not finalized yet but will be near mall road market. we are ensuring clean, safe, and comfortable accommodation. details will be shared once confirmed.",
+    desc: "stay at Almost Heaven (almostheaven.co.in) near mall road market in mussoorie. clean, safe, and comfortable accommodation with all amenities.",
     rotate: "-1deg",
   },
   {
