@@ -27,7 +27,7 @@ const cards = [
     imgAlt: "Star",
     rotate: "-1deg",
     title: "how much?",
-    body: "₹7,200 covers the ride, stay, food, and hackathon experience. zero profit — every rupee goes to the event.",
+    body: "₹8,200 covers the ride, stay, food, and hackathon experience. zero profit — every rupee goes to the event.",
   },
   {
     img: campfireImg,
