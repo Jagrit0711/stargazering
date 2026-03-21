@@ -5,7 +5,7 @@ import claimSpotImg from "@/assets/claim-spot-sticker.png";
 import moonImg from "@/assets/moon-sticker.png";
 import telescopeImg from "@/assets/telescope-sticker.png";
 
-const TARGET_DATE = new Date("2025-04-10T06:00:00+05:30").getTime();
+const TARGET_DATE = new Date("2025-04-10T07:00:00+05:30").getTime();
 
 const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
