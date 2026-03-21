@@ -3,8 +3,9 @@ import astronautImg from "@/assets/astronaut-sticker.png";
 import starImg from "@/assets/star-sticker.png";
 
 const contacts = [
-  { name: "jagrit", email: "jagrit@zuup.dev", phone: "8851844602" },
-  { name: "advithya", email: "advithya@zuup.dev", phone: "9810273085" },
+  { name: "jagrit", email: "jagrit@zuup.dev", phone: "8851844602", role: "organizer" },
+  { name: "advithya", email: "advithya@zuup.dev", phone: "9810273085", role: "organizer" },
+  { name: "vansh gupta", email: "", phone: "9654191089", role: "student incharge" },
 ];
 
 const ContactSection = () => {
