@@ -10,6 +10,8 @@ import ApplySection from "@/components/ApplySection";
 import ScheduleSection from "@/components/ScheduleSection";
 import FaqSection from "@/components/FaqSection";
 import PaymentSection from "@/components/PaymentSection";
+import GallerySection from "@/components/GallerySection";
+import PricingSection from "@/components/PricingSection";
 import nightSkyBg from "@/assets/night-sky-bg.jpg";
 
 const Index = () => {
@@ -35,6 +37,8 @@ const Index = () => {
         <StickerCards />
         <ScheduleSection />
         <ExploreSection />
+        <GallerySection />
+        <PricingSection />
         <ApplySection />
         <PaymentSection />
         <SafetySection />
