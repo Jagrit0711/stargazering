@@ -9,7 +9,7 @@ const faqItems = [
   },
   {
     question: "What does the 8.5k INR fee include?",
-    answer: "The fee covers luxury AC tempo traveller from Delhi, accommodation in Mussoorie, all meals (except Day 1 breakfast — carry your own), and full event access including hackathon, excursions, and activities.",
+    answer: "The fee of ₹8,200 covers luxury AC tempo traveller from Delhi, accommodation in Mussoorie (Almost Heaven hotel near Mall Road), all meals (except Day 1 breakfast — carry your own), and full event access including hackathon, excursions, and activities.",
   },
   {
     question: "Is any profit being made from this event?",
