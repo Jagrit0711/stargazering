@@ -8,8 +8,8 @@ const faqItems = [
     answer: "Anyone can join. Students, professionals, and first-time builders are all welcome. This is not affiliated with any school or college.",
   },
   {
-    question: "What does the 8.5k INR fee include?",
-    answer: "The fee covers luxury AC tempo traveller from Delhi, accommodation in Mussoorie, all meals (except Day 1 breakfast — carry your own), and full event access including hackathon, excursions, and activities.",
+    question: "What does the ₹8,200 fee include?",
+    answer: "The fee of ₹8,200 covers luxury AC tempo traveller from Delhi, accommodation in Mussoorie (Almost Heaven hotel near Mall Road), all meals (except Day 1 breakfast — carry your own), and full event access including hackathon, excursions, and activities.",
   },
   {
     question: "Is any profit being made from this event?",
@@ -41,7 +41,7 @@ const faqItems = [
   },
   {
     question: "What about travel and accommodation?",
-    answer: "Travel is in a luxury fully air-conditioned tempo traveller with push-back seats. The hotel hasn't been finalized yet but will be near Mall Road market. We're ensuring clean, safe, and comfortable accommodation. Details will be shared once confirmed.",
+    answer: "Travel is in a luxury fully air-conditioned tempo traveller with push-back seats. The hotel is Almost Heaven (almostheaven.co.in) located near Mall Road market in Mussoorie — clean, safe, and comfortable accommodation.",
   },
   {
     question: "What places will we visit besides the hackathon?",

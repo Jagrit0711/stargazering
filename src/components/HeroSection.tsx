@@ -1,10 +1,30 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import starImg from "@/assets/star-sticker.png";
 import claimSpotImg from "@/assets/claim-spot-sticker.png";
 import moonImg from "@/assets/moon-sticker.png";
 import telescopeImg from "@/assets/telescope-sticker.png";
 
+const TARGET_DATE = new Date("2025-04-10T06:00:00+05:30").getTime();
+
 const HeroSection = () => {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const tick = () => {
+      const diff = Math.max(0, TARGET_DATE - Date.now());
+      setTimeLeft({
+        days: Math.floor(diff / 86400000),
+        hours: Math.floor((diff % 86400000) / 3600000),
+        minutes: Math.floor((diff % 3600000) / 60000),
+        seconds: Math.floor((diff % 60000) / 1000),
+      });
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-[15vh] text-center overflow-hidden">
       {/* Floating decorative stickers */}
@@ -66,6 +86,26 @@ const HeroSection = () => {
           april 10th. pure magic.
         </motion.p>
 
+        {/* Countdown */}
+        <motion.div
+          className="flex justify-center gap-4 md:gap-6 mt-8"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          {[
+            { val: timeLeft.days, label: "days" },
+            { val: timeLeft.hours, label: "hrs" },
+            { val: timeLeft.minutes, label: "min" },
+            { val: timeLeft.seconds, label: "sec" },
+          ].map((unit) => (
+            <div key={unit.label} className="sticker-card !p-3 md:!p-4 min-w-[60px] md:min-w-[80px]">
+              <span className="font-display text-2xl md:text-4xl text-primary glow-text">{String(unit.val).padStart(2, "0")}</span>
+              <p className="font-body text-[10px] md:text-xs text-foreground/60 mt-1">{unit.label}</p>
+            </div>
+          ))}
+        </motion.div>
+
         <motion.p
           className="font-body text-sm md:text-base text-foreground/70 mt-4"
           initial={{ opacity: 0 }}
@@ -96,7 +136,7 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
         >
-          just <span className="text-primary glow-text text-2xl md:text-3xl">₹7,200</span> all inclusive
+          just <span className="text-primary glow-text text-2xl md:text-3xl">₹8,200</span> all inclusive
         </motion.p>
       </motion.div>
     </section>

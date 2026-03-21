@@ -3,8 +3,9 @@ import astronautImg from "@/assets/astronaut-sticker.png";
 import starImg from "@/assets/star-sticker.png";
 
 const contacts = [
-  { name: "jagrit", email: "jagrit@zuup.dev", phone: "8851844602" },
-  { name: "advithya", email: "advithya@zuup.dev", phone: "9810273085" },
+  { name: "jagrit", email: "jagrit@zuup.dev", phone: "8851844602", role: "organizer" },
+  { name: "advithya", email: "advithya@zuup.dev", phone: "9810273085", role: "organizer" },
+  { name: "vansh gupta", email: "", phone: "9654191089", role: "student incharge" },
 ];
 
 const ContactSection = () => {
@@ -33,10 +34,13 @@ const ContactSection = () => {
             transition={{ type: "spring", bounce: 0.4, delay: i * 0.1 }}
           >
             <img src={starImg} alt="" className="sticker-img w-8 -mt-8" />
+            <p className="font-body text-xs text-foreground/50 uppercase tracking-wider">{c.role}</p>
             <h3 className="font-display text-2xl text-primary font-bold">{c.name}</h3>
-            <a href={`mailto:${c.email}`} className="text-foreground hover:text-primary transition-colors font-body text-sm">
-              {c.email}
-            </a>
+            {c.email && (
+              <a href={`mailto:${c.email}`} className="text-foreground hover:text-primary transition-colors font-body text-sm">
+                {c.email}
+              </a>
+            )}
             <a href={`tel:${c.phone}`} className="text-foreground hover:text-primary transition-colors font-body text-sm">
               {c.phone}
             </a>
