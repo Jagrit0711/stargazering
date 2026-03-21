@@ -8,7 +8,7 @@ const faqItems = [
     answer: "Anyone can join. Students, professionals, and first-time builders are all welcome. This is not affiliated with any school or college.",
   },
   {
-    question: "What does the 8.5k INR fee include?",
+    question: "What does the ₹8,200 fee include?",
     answer: "The fee of ₹8,200 covers luxury AC tempo traveller from Delhi, accommodation in Mussoorie (Almost Heaven hotel near Mall Road), all meals (except Day 1 breakfast — carry your own), and full event access including hackathon, excursions, and activities.",
   },
   {
