@@ -103,7 +103,7 @@ const StickerCards = () => {
           the shivayas
         </a>
         <p className="font-body text-foreground/60 text-xs max-w-md text-center">
-          we take zero profit from this event. every single rupee of the ₹7,200 fee goes directly into travel, stay, food, and the hackathon experience.
+          we take zero profit from this event. every single rupee of the ₹8,200 fee goes directly into travel, stay, food, and the hackathon experience.
         </p>
       </motion.div>
     </section>

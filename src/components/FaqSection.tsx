@@ -41,7 +41,7 @@ const faqItems = [
   },
   {
     question: "What about travel and accommodation?",
-    answer: "Travel is in a luxury fully air-conditioned tempo traveller with push-back seats. The hotel hasn't been finalized yet but will be near Mall Road market. We're ensuring clean, safe, and comfortable accommodation. Details will be shared once confirmed.",
+    answer: "Travel is in a luxury fully air-conditioned tempo traveller with push-back seats. The hotel is Almost Heaven (almostheaven.co.in) located near Mall Road market in Mussoorie — clean, safe, and comfortable accommodation.",
   },
   {
     question: "What places will we visit besides the hackathon?",

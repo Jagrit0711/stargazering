@@ -34,10 +34,13 @@ const ContactSection = () => {
             transition={{ type: "spring", bounce: 0.4, delay: i * 0.1 }}
           >
             <img src={starImg} alt="" className="sticker-img w-8 -mt-8" />
+            <p className="font-body text-xs text-foreground/50 uppercase tracking-wider">{c.role}</p>
             <h3 className="font-display text-2xl text-primary font-bold">{c.name}</h3>
-            <a href={`mailto:${c.email}`} className="text-foreground hover:text-primary transition-colors font-body text-sm">
-              {c.email}
-            </a>
+            {c.email && (
+              <a href={`mailto:${c.email}`} className="text-foreground hover:text-primary transition-colors font-body text-sm">
+                {c.email}
+              </a>
+            )}
             <a href={`tel:${c.phone}`} className="text-foreground hover:text-primary transition-colors font-body text-sm">
               {c.phone}
             </a>

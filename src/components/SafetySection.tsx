@@ -108,7 +108,7 @@ const SafetySection = () => {
         </ul>
       </motion.div>
 
-      {/* Download section */}
+      {/* Download section - waiver only */}
       <motion.div
         className="sticker-card max-w-3xl mx-auto"
         style={{ rotate: "1deg" }}
@@ -119,33 +119,21 @@ const SafetySection = () => {
       >
         <div className="flex items-center justify-center gap-3 mb-6">
           <img src={starImg} alt="" className="sticker-img w-8" />
-          <h3 className="font-display text-3xl md:text-4xl text-primary text-center">downloads</h3>
+          <h3 className="font-display text-3xl md:text-4xl text-primary text-center">mandatory waiver</h3>
           <img src={starImg} alt="" className="sticker-img w-8" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <a
-            href="/stargazing-brochure.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center gap-3 p-6 rounded-2xl border-2 border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors group"
-          >
-            <span className="font-display text-5xl group-hover:scale-110 transition-transform">📄</span>
-            <span className="font-display text-2xl text-primary">event brochure</span>
-            <span className="font-body text-sm text-foreground/70 text-center">full details about the event, schedule, safety & more</span>
-          </a>
-          <a
-            href="/stargazing-waiver.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center gap-3 p-6 rounded-2xl border-2 border-secondary/30 bg-secondary/5 hover:bg-secondary/10 transition-colors group"
-          >
-            <span className="font-display text-5xl group-hover:scale-110 transition-transform">📝</span>
-            <span className="font-display text-2xl text-secondary">waiver form</span>
-            <span className="font-body text-sm text-foreground/70 text-center">print this out, fill it, and submit while boarding the bus. mandatory!</span>
-          </a>
-        </div>
+        <a
+          href="/stargazing-waiver.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center gap-3 p-6 rounded-2xl border-2 border-secondary/30 bg-secondary/5 hover:bg-secondary/10 transition-colors group max-w-sm mx-auto"
+        >
+          <img src={starImg} alt="" className="sticker-img w-12 group-hover:scale-110 transition-transform" />
+          <span className="font-display text-2xl text-secondary">download waiver</span>
+          <span className="font-body text-sm text-foreground/70 text-center">print this out, fill it, and submit while boarding the bus. mandatory!</span>
+        </a>
         <p className="font-body text-xs text-foreground/50 text-center mt-4">
-          ⚠️ no one boards the bus without a signed waiver. please print and bring it with you.
+          no one boards the bus without a signed waiver. please print and bring it with you.
         </p>
       </motion.div>
     </section>
