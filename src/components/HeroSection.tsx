@@ -5,14 +5,44 @@ import claimSpotImg from "@/assets/claim-spot-sticker.png";
 import moonImg from "@/assets/moon-sticker.png";
 import telescopeImg from "@/assets/telescope-sticker.png";
 
-const TARGET_DATE = new Date("2025-04-10T07:00:00+05:30").getTime();
+const TARGET_DATE_IST_MS = 1775784600000; // 10 Apr 2026, 07:00 AM IST
 
 const HeroSection = () => {
+  const [serverOffsetMs, setServerOffsetMs] = useState(0);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
+    let mounted = true;
+
+    const syncServerTime = async () => {
+      try {
+        const response = await fetch(window.location.origin, {
+          method: "HEAD",
+          cache: "no-store",
+        });
+
+        const serverDateHeader = response.headers.get("date");
+        if (!serverDateHeader || !mounted) return;
+
+        const serverNow = new Date(serverDateHeader).getTime();
+        if (Number.isNaN(serverNow)) return;
+
+        setServerOffsetMs(serverNow - Date.now());
+      } catch {
+        // fallback to device clock
+      }
+    };
+
+    void syncServerTime();
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  useEffect(() => {
     const tick = () => {
-      const diff = Math.max(0, TARGET_DATE - Date.now());
+      const now = Date.now() + serverOffsetMs;
+      const diff = Math.max(0, TARGET_DATE_IST_MS - now);
       setTimeLeft({
         days: Math.floor(diff / 86400000),
         hours: Math.floor((diff % 86400000) / 3600000),
@@ -20,10 +50,11 @@ const HeroSection = () => {
         seconds: Math.floor((diff % 60000) / 1000),
       });
     };
+
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, []);
+  }, [serverOffsetMs]);
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-[15vh] text-center overflow-hidden">
