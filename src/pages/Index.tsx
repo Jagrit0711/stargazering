@@ -1,4 +1,5 @@
 import FloatingStickers from "@/components/FloatingStickers";
+import BackgroundMusic from "@/components/BackgroundMusic";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import StickerCards from "@/components/StickerCards";
@@ -29,6 +30,7 @@ const Index = () => {
       <div className="fixed inset-0 hero-focus z-0" />
 
       <FloatingStickers />
+      <BackgroundMusic />
       <Navbar />
 
       <main className="relative z-10">
